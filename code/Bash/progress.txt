@@ -1,0 +1,109 @@
+13.05.23
+
+Working with Bash on Window: /d/Documents/Hồ sơ/Germany/CEPLAS/Qualification phase/Rotation2_Stetter/Amaranth_TE_annotation
+
+- Create project directory
+- Copy results file into the Result directory
++ Forgot to add -r option, so the code cannot work
++ add wrong directory, remove the file - use rm command but for got to specify the -r option to delete directory that is not empty
+
+- Try to remove the token from Git repository
++ Delete it from local file
+
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository using git filter-repo
++ python not available in computer
++ Give up
+
++ Try to change it on GitHub
+
+ git push origin main
+
+Failed, as the credential has changed - have to reset
+
+git config --global --unset credential.helper
+git config credential.helper store
+
++ Push again, succeeded, but forgot to add it to the stage and commit :)
+
+git push origin main
+Everything up-to-date
+
++ Retry"
+
+$ git add .
+warning: in the working copy of 'data/parsedAnnotations/NCBICDD1000.gff3', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/helitronScanner.fasta', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/helitronScanner.gff3', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/ltrHarvest.fasta', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/ltrHarvest.gff3', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/mitefind.gff3', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/mitetracker.fasta', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/mitetracker.gff3', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/must.fasta', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/must.gff3', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/sinefind.fasta', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/sinefind.gff3', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/sinescan.fasta', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/sinescan.gff3', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/tirvish.fasta', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/tirvish.gff3', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'data/parsedAnnotations/transposonPSI.gff3', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'progress_general_log.txt', LF will be replaced by CRLF the next time Git touches it
+
++ Should not add everything in the working directory.....
+
+
++ Try #2...
+
+$ git reset .
+Unstaged changes after reset:
+D       token.txt
+
++ Try to see the difference
+
+$ git diff
+diff --git a/token.txt b/token.txt
+deleted file mode 100644
+index 1af9a0a..0000000
+--- a/token.txt
++++ /dev/null
+
+$ git commit -m "delete token"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    token.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        code/
+        data/
+        progress_general_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
++ Finally realize how to delete the file......
+
+$ git rm token.txt
+rm 'token.txt'
+
+$ git commit -m "delete token for real"
+[main 69eb4c1] delete token for real
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 token.txt
+
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (1/1), done.
+Writing objects: 100% (2/2), 244 bytes | 244.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PhotosyntheticBatman/TEannotation_amaranth.git
+   cb7768c..69eb4c1  main -> main
+
++ Successfully deleted.....
