@@ -107,3 +107,102 @@ To https://github.com/PhotosyntheticBatman/TEannotation_amaranth.git
    cb7768c..69eb4c1  main -> main
 
 + Successfully deleted.....
++ Add the new directory to GitHub
+
+$ git add code/
+
+$ git commit -m "add code file"
+[main b462aac] add code file
+ 4 files changed, 123 insertions(+)
+ create mode 100644 code/Bash/progress.txt
+ create mode 100644 code/R/R.Rproj
+ create mode 100644 code/R/Result_analysis.R
+ create mode 100644 code/README.txt
+
+$ git push origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 2.08 KiB | 2.08 MiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PhotosyntheticBatman/TEannotation_amaranth.git
+   69eb4c1..b462aac  main -> main
+
+- Set up VPN uni Koeln: Successful
+https://rrzk.uni-koeln.de/internetzugang-web/netzzugang/vpn/integrierter-windows-vpn
+
+- download from CHEOPS to the working directory
+https://stackoverflow.com/questions/8975798/copying-a-local-file-from-windows-to-a-remote-server-using-scp
+
+$  scp qnguyen6@cheops.rrz.uni-koeln.de:/home/qnguyen6/new_project/data/Amaranth_genome/Scaffold_9.fasta .
+
+- demo job on CHEOPS - finished successfully - around 1 day???
+
+- Extraxt info from Chr9 FASTA file:
+
+https://biolib.com/samtools/samtools-dict/
+
+samtools dict new_project/data/Amaranth_genome/Scaffold_9.fasta -o new_project/data/Amaranth_genome/Chr9_ref.txt
+
+- Indexing chr9 FASTA file
+
+[qnguyen6@cheops1 ~]$ cd new_project/data/Amaranth_genome/
+[qnguyen6@cheops1 Amaranth_genome]$ samtools faidx Scaffold_9.fasta
+[qnguyen6@cheops1 Amaranth_genome]$ ls
+Ahypochondriacus_2.2_polished_corrected.cds.fasta  Ahypochondriacus_2.2_polished_corrected.prot.fasta  Chr9_ref.txt      Scaffold_9.fasta.fai
+Ahypochondriacus_2.2_polished_corrected.gff        Ahypochondriacus_2.2_polished.softmasked.fasta      readme.txt
+Ahypochondriacus_2.2_polished_corrected.gtf        Ahypochondriacus_2.2_polished.softmasked.fasta.fai  Scaffold_9.fasta
+[qnguyen6@cheops1 Amaranth_genome]$ head  Scaffold_9.fasta.fai
+Scaffold_9      22697164        12      60      61
+[qnguyen6@cheops1 Amaranth_genome]$ nano  Scaffold_9.fasta.fai
+[qnguyen6@cheops1 Amaranth_genome]$
+
+- Reveal the path in the local laptop
+
+$ realpath CandidatesB_it2.gff3
+
+- tried to set up  /usr/bin/ssh/config~ but cannot find it in Windows
+
+
+16.05.23
+
+- Checking CHEOPS job
+
+[qnguyen6@cheops1 ~]$ squeue -u qnguyen6
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          17897272   smp-rh7 reasonaT qnguyen6  R 5-10:07:01      1 cheops11708
+          17897944   smp-rh7 reasonaT qnguyen6  R 5-06:47:35      1 cheops11701
+
+- Still at the same task???? Abnormally long....
+
+Things can be done for tomorrow
+
+- Job array for annotation steps
+- Ask for gene annotation steps
+- Look at transposition detection
+- Write the reports
+- Finish the plot in R 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
