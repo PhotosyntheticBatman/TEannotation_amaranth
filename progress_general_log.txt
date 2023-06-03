@@ -1,0 +1,228 @@
+    1  [200~git config --global --get-regexp user
+    2  git config --global --get-regexp user
+    3  git -- version
+    4  pwspwd
+    5  pwd
+    6  git --version
+    7  $ git config --global user.name "tomic" 
+    8  git config --global user.name "tomic"
+    9  git config --global user.name
+   10  git config --global user.email "Quang.Huy.Nguyen@hhu.de"
+   11  git config --global.user.email
+   12  git config --global user.email
+   13  git init
+   14  cd New folder
+   15  cd projact
+   16  cd project
+   17  git init
+   18  200~git config --get-all --show-origin core.autocrlf
+   19  git config --get-all --show-origin core.autocrlf
+   20  git config --global core.autocrlf true
+   21  git config --global --replace-all core.autocrlf true
+   22  git config --get-all --show-origin core.autocrlf
+   23  git init
+   24  clear
+   25  git status
+   26  git remote add origin https://github.com/PhotosyntheticBatman/TEannotation_amaranth.git
+   27  git branch -M main
+   28  git push -u origin main
+   29  git commit-m "initial commit"
+   30  git commit -m "Initial commit"
+   31  $ git remote add origin https://github.com/PhotosyntheticBatman/TEannotation_amaranth.git
+   32  git branch -M main
+   33  git push -u origin main
+   34   git remote add origin https://github.com/PhotosyntheticBatman/TEannotation_amaranth.git
+   35  git branch -M main
+   36  git push -u origin main
+   37  git add --all
+   38  git commit -m "Sencond initial commit"
+   39  git push -u origin main
+   40  clear
+   41  git show-ref
+   42  git push origin HEAD:main
+   43  git push -u origin main
+   44  mkdir honey.txt
+   45  git add honey.txt
+   46  git commit -m "Add honey.txt"
+   47  git push -u origin main
+   48  git show-ref
+   49  git push -u origin master
+   50  clear
+   51  git push -u origin main
+   52  git commit -m "add honey 2"
+   53  git add token.txt
+   54  git commit -m "add token"
+   55  git push -u orgin main
+   56  git push -u origin main
+   57  echo "Hello Git and GitHub" >> README.txt
+   58  echo "Hello Git and GitHub" >> README.txt
+   59  git add README.txt
+   60  git commit -m "Add README"
+   61  git push -u origin main
+   62  clear
+   63  git -v
+   64  mkdir Amaranth_TE_annotation/code Amaranth_TE_annotation/data Amaranth_TE_annotation/Raw_data Amaranth_TE_annotation/Results Amaranth_TE_annotation/Plots
+   65  cd Amaranth_TE_annotation/
+   66  mkdir code/logs code/R code/Bash
+   67  touch code/README.txt
+   68  touch progress_general_log
+   69  history >> progress_general_log.txt 
+   70  rm progress_general_log
+   71  ls
+   72  ls
+   73  history >> progress_general_log.txt 
+   74  nano progress_general_log.txt 
+   75  ccp/d/Documents/Hồ sơ/Germany/CEPLAS/Qualification phase/Rotation2_Stetter/parsedAnnotations data/ 
+   76  cp ../parsedAnnotations data/ 
+   77* cp -r ../pa data/ 
+   78  ls data/
+   79  ls data/parsedAnnotations/
+   80  ls data/parsedAnnotations/parsedAnnotations/
+   81  rm data/parsedAnnotations/parsedAnnotations/
+   82  rm -d data/parsedAnnotations/parsedAnnotations/
+   83  rm -r data/parsedAnnotations/parsedAnnotations/
+   84  cp ../parsedAnnotations/parsedAnnotations/ data/ 
+   85  cp -r ../parsedAnnotations/parsedAnnotations/ data/ 
+   86  ls data/parsedAnnotations/
+   87  nano code/Bash/progress.txt
+   88  history > progress_general_log.txt 
+
+
+21.5.23
+
+- Checking work on CHEOPS
+$ ssh qnguyen6@cheops.rrz.uni-koeln.de
+$ squeue -u qnguyen6
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          17897272   smp-rh7 reasonaT qnguyen6  R 10-09:13:35      1 cheops11708
+          17897944   smp-rh7 reasonaT qnguyen6  R 10-05:54:09      1 cheops11701
++ Still going....
+
+new_project/logs/job.17897272.out
+Annotation by software  ltrHarvest  finished successfully...
+/home/qnguyen6/.conda/envs/transposon_annotation_tools_env/bin/transposon_annotation_tools_mitefinderii/miteFinder_linux_x64 -pattern_scoring /home/qnguyen6/.conda/envs/transposon_annotation_tools_env/bin/transposon_annotation_tools_mitefinderii/pattern_scoring.txt -input /home/qnguyen6/new_project/workspace/amaranth_chr9/sequence.fasta -output /home/qnguyen6/new_project/workspace/amaranth_chr9/mitefind/result.txt
+#Sequence 0: 0
+##############
+#The program cost 89 seconds totally to search for MITEs.
+/home/qnguyen6/.conda/envs/transposon_annotation_tools_env/bin/transposon_annotation_tools_mitefinderii/miteFinder_linux_x64 -pattern_scoring /home/qnguyen6/.conda/envs/transposon_annotation_tools_env/bin/transposon_annotation_tools_mitefinderii/pattern_scoring.txt -input /home/qnguyen6/new_project/workspace/amaranth_chr9/sequence_rc.fasta -output /home/qnguyen6/new_project/workspace/amaranth_chr9/mitefind_rc/result.txt
+#Sequence 0: 0
+##############
+#The program cost 89 seconds totally to search for MITEs.
+Annotation by software  mitefind  finished successfully...
+new_project/logs/job.17897944.out
+#Sequence 901: 0
+#Sequence 902: 0
+#Sequence 903: 0
+#Sequence 904: 0
+#Sequence 905: 0
+#Sequence 906: 0
+#Sequence 907: 0
+##############
+#The program cost 1897 seconds totally to search for MITEs.
+Annotation by software  mitefind  finished successfully...
+
++ Allocate more resources for 2 jobs
+
+$ scontrol show job 17897272
+JobId=17897272 JobName=reasonaTE_project_creation
+   UserId=qnguyen6(409633) GroupId=uniuser(666) MCS_label=N/A
+   Priority=7557 Nice=0 Account=unikoeln QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=10-09:17:32 TimeLimit=20-20:00:00 TimeMin=N/A
+   SubmitTime=2023-05-11T11:15:37 EligibleTime=2023-05-11T11:15:37
+   AccrueTime=2023-05-11T11:15:37
+   StartTime=2023-05-11T11:15:37 EndTime=2023-06-01T07:15:37 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-05-11T11:15:37 Scheduler=Main
+   Partition=smp-rh7 AllocNode:Sid=cheops1:6967
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=cheops11708
+   BatchHost=cheops11708
+   NumNodes=1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=4,mem=42G,node=1,billing=4
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=4 MinMemoryNode=42G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/qnguyen6/new_project/code/reasonaTE_project_creation.sh
+   WorkDir=/home/qnguyen6/new_project
+   Comment=UniKoeln
+   StdErr=/home/qnguyen6/new_project/logs/arrays_trial_17897272.err
+   StdIn=/dev/null
+   StdOut=/home/qnguyen6/new_project/logs/job.%J.out
+   Power=
+   MailUser=qnguyen6@uni-koeln.de MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT
+
+sstat 17897272
+JobID         MaxVMSize  MaxVMSizeNode  MaxVMSizeTask  AveVMSize     MaxRSS MaxRSSNode MaxRSSTask     AveRSS MaxPages MaxPagesNode   MaxPagesTask   AvePages     MinCPU MinCPUNode MinCPUTask     AveCPU   NTasks AveCPUFreq ReqCPUFreqMin ReqCPUFreqMax ReqCPUFreqGov ConsumedEnergy  MaxDiskRead MaxDiskReadNode MaxDiskReadTask  AveDiskRead MaxDiskWrite MaxDiskWriteNode MaxDiskWriteTask AveDiskWrite TRESUsageInAve TRESUsageInMax TRESUsageInMaxNode TRESUsageInMaxTask TRESUsageInMin TRESUsageInMinNode TRESUsageInMinTask TRESUsageInTot TRESUsageOutAve TRESUsageOutMax TRESUsageOutMaxNode TRESUsageOutMaxTask TRESUsageOutMin TRESUsageOutMinNode TRESUsageOutMinTask TRESUsageOutTot
+------------ ---------- -------------- -------------- ---------- ---------- ---------- ---------- ---------- -------- ------------ -------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ------------- ------------- ------------- -------------- ------------ --------------- --------------- ------------ ------------ ---------------- ---------------- ------------ -------------- -------------- ------------------ ------------------ -------------- ------------------ ------------------ -------------- --------------- --------------- ------------------- ------------------- --------------- ------------------- ------------------- ---------------
+
+sstat -j 17897272
+JobID         MaxVMSize  MaxVMSizeNode  MaxVMSizeTask  AveVMSize     MaxRSS MaxRSSNode MaxRSSTask     AveRSS MaxPages MaxPagesNode   MaxPagesTask   AvePages     MinCPU MinCPUNode MinCPUTask     AveCPU   NTasks AveCPUFreq ReqCPUFreqMin ReqCPUFreqMax ReqCPUFreqGov ConsumedEnergy  MaxDiskRead MaxDiskReadNode MaxDiskReadTask  AveDiskRead MaxDiskWrite MaxDiskWriteNode MaxDiskWriteTask AveDiskWrite TRESUsageInAve TRESUsageInMax TRESUsageInMaxNode TRESUsageInMaxTask TRESUsageInMin TRESUsageInMinNode TRESUsageInMinTask TRESUsageInTot TRESUsageOutAve TRESUsageOutMax TRESUsageOutMaxNode TRESUsageOutMaxTask TRESUsageOutMin TRESUsageOutMinNode TRESUsageOutMinTask TRESUsageOutTot
+------------ ---------- -------------- -------------- ---------- ---------- ---------- ---------- ---------- -------- ------------ -------------- ---------- ---------- ---------- ---------- ---------- -------- ---------- ------------- ------------- ------------- -------------- ------------ --------------- --------------- ------------ ------------ ---------------- ---------------- ------------ -------------- -------------- ------------------ ------------------ -------------- ------------------ ------------------ -------------- --------------- --------------- ------------------- ------------------- --------------- ------------------- ------------------- ---------------
+
++ Fail in allocating more resource, try another way....
+
+
+- Using bedtools to see if there is intersect between gene annotation file and TE annotation file, esp. for AHp014591
+$ cd new_project/data/Amaranth_genome/
+
++ No bedtools module, start installation on CHEOPS
+
+[qnguyen6@cheops1 tools]$ wget https://github.com/arq5x/bedtools2/releases/download/v2.31.0/bedtools-2.31.0.tar.gz
+ tar -zxvf bedtools-2.31.0.tar.gz
+
+$ cd bedtools2
+$ make
+
+[qnguyen6@cheops1 bedtools2]$ ls
+bin  data  genomes  LICENSE  Makefile  obj  README.md  scripts  src  test
+[qnguyen6@cheops1 bedtools2]$ cd ../..
+[qnguyen6@cheops1 ~]$ ls -alt
+total 22848
+drwxr-xr-x   3 qnguyen6 uniuser     4096 May 21 21:07 tools
+-rw-------   1 qnguyen6 uniuser     4471 May 19 17:15 .bash_history
+drwxr-xr-x 601 root     root      262144 May 19 15:52 ..
+-rw-r--r--   1 qnguyen6 uniuser      129 May 17 17:55 progress.md
+-rw-r--r--   1 qnguyen6 uniuser 23075463 May 14 22:20 Scaffold_9.fasta
+drwx------  11 qnguyen6 uniuser     4096 May 14 22:20 .
+-rw-------   1 qnguyen6 uniuser       53 May 14 18:07 .Xauthority
+drwxr-xr-x   4 qnguyen6 uniuser     4096 May 14 15:52 .cache
+drwxr-xr-x   4 qnguyen6 uniuser     4096 May 14 15:52 .config
+drwxr-xr-x   9 qnguyen6 uniuser     4096 May 14 13:38 new_project
+drwxrwsr-x   4 qnguyen6 uniuser     4096 May 10 12:53 .conda
+drwxr-----   3 qnguyen6 uniuser     4096 May 10 09:43 .pki
+-rw-r--r--   1 qnguyen6 uniuser       67 May 10 09:42 .gitconfig
+drwxr-xr-x   2 qnguyen6 uniuser     4096 May  8 10:52 .ssh
+-rw-r--r--   1 qnguyen6 uniuser       18 Sep 25  2014 .bash_logout
+-rw-r--r--   1 qnguyen6 uniuser      176 Sep 25  2014 .bash_profile
+-rw-r--r--   1 qnguyen6 uniuser      124 Sep 25  2014 .bashrc
+drwxr-xr-x   4 qnguyen6 uniuser     4096 Sep 23  2013 .mozilla
+-rw-r--r--   1 qnguyen6 uniuser      500 May  7  2013 .emacs
+drwxr-xr-x   2 qnguyen6 uniuser     4096 Mar 25  2011 .gnome2
+
+Adding bin dicrectory of bedtools to PATH??
+https://phoenixnap.com/kb/linux-add-to-path
+/home/qnguyen6/tools/bedtools2/bin
+
+[qnguyen6@cheops1 ~]$ nano .bashrc
+[qnguyen6@cheops1 ~]$ which bin
+/usr/bin/which: no bin in (/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/home/qnguyen6/bin:/usr/local/bin:/usr/local/sbin/:/home/qnguyen6/bin)
+[qnguyen6@cheops1 ~]$ echo $PATH
+/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/home/qnguyen6/bin:/usr/local/bin:/usr/local/sbin/:/home/qnguyen6/bin
+[qnguyen6@cheops1 ~]$ cd bin
+-bash: cd: bin: No such file or directory
+[qnguyen6@cheops1 ~]$ realpath
+realpath: missing operand
+Try 'realpath --help' for more information.
+[qnguyen6@cheops1 ~]$ cd tools/bedtools2/
+[qnguyen6@cheops1 bedtools2]$ realpath bin
+/home/qnguyen6/tools/bedtools2/bin
+[qnguyen6@cheops1 bedtools2]$ nano .bashrc
+[qnguyen6@cheops1 bedtools2]$ cd ../..
+[qnguyen6@cheops1 ~]$ nano .bashrc
+[qnguyen6@cheops1 ~]$ source .bashrc
+[qnguyen6@cheops1 ~]$ echo $PATH
+/home/qnguyen6/tools/bedtools2/bin:/u
+
++ Checking intersect funtion

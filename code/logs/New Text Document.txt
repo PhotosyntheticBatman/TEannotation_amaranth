@@ -1,0 +1,2 @@
+newName<-rep(NA,nrow(CandidatesB_it2))
+> newName[which(CandidatesB_it2$V2=="helitronScanner")]<-"helitron"

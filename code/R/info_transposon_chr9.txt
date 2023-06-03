@@ -1,0 +1,7 @@
+V2,number,avg_length,median_length,min_length,max_length
+helitronScanner,115,9724,9881,501,19936
+ltrHarvest,548,6064,5064,1112,15455
+miteTracker,1232,336,297,58,795
+sineFinder,62,273,254.5,110,563
+sineScan,249,244,214,91,705
+TIRvish,545,2731,1505,539,10281
